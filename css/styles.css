@@ -296,7 +296,7 @@ nav h1 a {
 
 	#maincontent {
 		width: 100%;
-		padding-top: 200px;
+
 	}
 
 	.inside #map-container {
@@ -310,12 +310,17 @@ nav h1 a {
 	}
 	#restaurant-container, #reviews-container {
 		width: auto;
+		padding-top: 90%;
 	}
 	#breadcrumb {
 		width:auto;
 	}
 	.inside #footer {
 	  width: inherit;
+	}
+
+	#restaurants-list li {
+		width: 100%;
 	}
 
 	/*#reviews-list li p:nth-child(-n+2){
@@ -341,9 +346,7 @@ nav h1 a {
 #restaurants-list {
 	margin: 10px;
 }
-#restaurants-list li {
-	width: 100%;
-}
+
 
 #restaurant-container, #reviews-container {
 	width:100%;

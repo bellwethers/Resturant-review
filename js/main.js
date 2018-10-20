@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
   updateRestaurants();
 
+  if (!navigator.serviceWorker)return;
+      navigator.serviceWorker.register('./js/sw.js').then(function() {
+        console.log('Registration worked!!!');
+      }).catch(function() {
+        console.log('Registration failed!');
+  });
+
 });
 
 /**
@@ -89,13 +96,6 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
-
-  if (!navigator.serviceWorker)return;
-      navigator.serviceWorker.register('/SW.js').then(function() {
-        console.log('Registration worked!');
-      }).catch(function() {
-        console.log('Registration failed!');
-});
 }
 /* window.initMap = () => {
   let loc = {
