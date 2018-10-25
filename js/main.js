@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       navigator.serviceWorker.register('./js/sw.js').then(function() {
         console.log('Registration worked!!!');
       }).catch(function() {
-        console.log('Registration failed!');
+        console.log('Registration failed :(');
   });
 
 });
@@ -170,6 +170,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = DBHelper.imageAltForRestaurant(restaurant);
   li.append(image);
 
   const name = document.createElement('h1');
